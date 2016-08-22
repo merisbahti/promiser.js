@@ -1,0 +1,16 @@
+{
+  "name": "promiser.js",
+  "version": "1.0.0",
+  "description": "Creates a native ES6 Promise from a function which takes a node style Error-First callback.",
+  "main": "promiser.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Meris Bahtijaragic <meris.bahti@gmail.com> (https://github.com/merisbahti)",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository" :
+  { "type" : "git"
+    , "url" : "https://github.com/merisbahti/promiser.js.git"
+  }
+}
