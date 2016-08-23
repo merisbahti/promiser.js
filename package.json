@@ -1,6 +1,6 @@
 {
   "name": "promiser.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a native ES6 Promise from a function which takes a node style Error-First callback.",
   "main": "promiser.js",
   "scripts": {
