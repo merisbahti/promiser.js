@@ -4,11 +4,11 @@ const createPromise = (fttc, context) => {
   }
   return (...args) => {
     return new Promise((resolve, reject) => {
-      fttc.apply(context, args.concat((err, res) => {
+      fttc.apply(context, args.concat((err, ...res) => {
         if (err) {
           reject(err);
         } else {
-          resolve(res);
+          resolve(...res);
         }
       }));
     });

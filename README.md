@@ -1,7 +1,7 @@
 # promiser.js
 Create native ES6 promises from functions which take node-style callbacks.
 
-## How to use 
+## How to use
 
 ### require the library:
 
@@ -9,7 +9,7 @@ Create native ES6 promises from functions which take node-style callbacks.
 
 ### How to create promises from functions.
     const fs = require('fs');
-    
+
     createPromise(fs.readFile)('test.js', 'utf8').
       then(() => console.log('SUCCESSFUL SUCCESS (function)')).
       catch(() => { throw new Error('FAILED SUCCESS (function)');});
@@ -36,7 +36,7 @@ Assuming we have a class which has a prototype function, `a`, which takes a node
         }
       }
     }
-  
+
 Instantiate the class, then create a promise from the method `a` by passing it to promiser,
 just don't forget to pass the context aswell!
 
@@ -45,9 +45,9 @@ just don't forget to pass the context aswell!
     createPromise(testClassSuccess.a, testClassSuccess)().
       then(console.log).
       catch(console.error);
-    
+
     const testClassFailure = new TestClass('FAILED FAILURE (method)', 'SUCCESSFUL FAILURE (method)', false);
-    
+
     createPromise(testClassFailure.a, testClassFailure)().
       then(console.log).
       catch(console.error);
