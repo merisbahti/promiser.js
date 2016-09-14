@@ -8,7 +8,7 @@ const createPromise = (fttc, context) => {
         if (err) {
           reject(err);
         } else {
-          resolve(...res);
+          resolve(res);
         }
       }));
     });
